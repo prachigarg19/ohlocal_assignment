@@ -1,13 +1,16 @@
 import React from 'react'
 import './styles/Card.css';
 export default function (props) {
-    // console.log(props.bid.shop_name)
   return (
+    //   product suggestion cards
     <div className='card'>
+        {/* contains product heading and image */}
         <div className="card_top">
+            {/* product heading */}
             <div className="left_card_top">
                 <h5>{props.bid.shop_address}</h5>
                 <h4>{`Rs ${props.bid.offer_price}`}</h4>
+                {/* Delivery and return info */}
                 <div className="delivery_return">
                     <h5>Delivery & Services</h5>
                     <p><img src={props.bid.express_delivery_icon}/>
@@ -20,11 +23,13 @@ export default function (props) {
                     </p>
                 </div>
             </div>
+            {/* image and product name */}
             <div className="right_card_top">
                 <img src={props.bid.shop_image}/>
                 <p>{props.bid.shop_name}</p>
             </div>
         </div>
+        
         <div className="card_center">
             <button id="extra_offer">
                 <img src={props.bid.extra_offer_icon}/>
