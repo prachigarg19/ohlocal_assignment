@@ -23,16 +23,18 @@
   .center p{
     font-size: 1em;
     color:#4b5363;
+    text-align: center;
   }
   /* main product */
 
   .main_product{
       display: flex;
       background-color: #f8faff;
-      width:80%;
+      width:90%;
       max-width: 1200px;
       min-width: 400px;
       margin-top: 3em;
+      padding: 3em 5em 0 5em;
   }
   .main_product_left{
       display: flex;

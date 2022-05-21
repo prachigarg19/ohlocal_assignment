@@ -2,6 +2,7 @@ import './App.css';
 import React, { useEffect, useState } from "react";
 import Navbar from './Components/Navbar';
 import Center from './Components/Center';
+import Card from './Components/Card';
 function App() {
   const [val, setVal] = useState({});
   const [isFetched,setisFetched] = useState(false);
@@ -22,13 +23,20 @@ function App() {
     useEffect(() => {
       getData();
     }, [isFetched==false]);
-   
+    
   return (
     <>
    { isFetched == true ?
     (<div className="App">
       <Navbar img={val.nav_bar.person_icon}/>
       <Center val={val}/>
+      <div className='alternate_products'>
+      { 
+        (val.bids)?.map((bid)=>(
+        <Card bid={val.bids[0]}/>
+        )) 
+     } 
+      </div>
     </div>)
   : 
   (<div className='App'>

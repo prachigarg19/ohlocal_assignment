@@ -1,0 +1,135 @@
+.card{
+    border:1px solid gray;
+    /* width:600px; */
+}
+.card_top{
+    display: flex;
+    gap:2em;
+}
+.left_card_top{
+    display: flex;
+    flex-direction:column;
+    flex-basis: 60%;
+    padding: 2em;
+}
+.left_card_top h5{
+    font-size: 1.2em;
+    color:#7E808C;
+    line-height: 0em;
+    margin-top: 0.4em;
+}
+.left_card_top h4{
+    font-size: 2.5em;
+    line-height: 0em;
+    margin-left: auto;
+    color:#EE8900;
+    margin-top: 0.4em;
+}
+.right_card_top{
+    display: flex;
+    flex-basis: 40%;
+    /* background-color:red; */
+    flex-direction: column;
+    margin-top: 2em;
+    align-items: center;
+    
+}
+.right_card_top img{
+    height:90px;
+    width:90px;
+}
+.right_card_top p{
+    font-size: 1em;
+    color: #7E808C;
+    font-weight: 500;
+}
+.delivery_return h5{
+    margin-top: 1.5em;
+    /* background-color: red; */
+}
+.delivery_return p{
+    display: flex;
+    gap:1.5em
+}
+.card_center{
+    margin-left: 2em;
+}
+#extra_offer{
+    border-style: none;
+    background-color: #229BC6;
+    padding: 0.4em 0.8em;
+    display: flex;
+    gap:0.8em;
+    color: #fff;
+    align-items: center;
+}
+.card_center p{
+    color:#696969;
+}
+.buy_now{
+    display: flex;
+    justify-content: center;
+}
+.buy_now button{
+    border-style: none;
+    color:#fff;
+    background-color: #EE8900;
+    font-size: 1em;
+    padding: 0.5em 1.5em;
+}
+.card_bottom p{
+    font-size: 1em;
+    color:gray;
+    margin-left: 2em;
+}
+.single_bottom_card{
+    background-color: #FAFAFA;
+    height: auto;
+    position: relative;
+    max-width: 600px;
+    min-width: 400px;
+}
+.single_bottom_card::before{
+    position: absolute;
+    content:'';
+    background-color: #696969;
+    width:30%;
+    height:100%;
+    top:0;
+    left:0
+}
+.single_bottom_right_card{
+    flex-basis: 70%;
+    padding: 1em;
+    margin-left: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.price{
+    display: flex;
+    gap:0.5em;
+    align-items: center;
+}
+.price p{
+    margin-left: 0.2em;
+    position: relative;
+}
+.price p::after{
+    position: absolute;
+    content: '';
+    top:50%;
+    bottom:50%;
+    left:0;
+    right:0;
+    width:100%;
+    height:2px;
+    background-color: #696969;
+}
+.price h4{
+    color:#EE8900;
+    font-size: 1.3em;
+}
+.price button{
+    font-size: 0.8em;
+    padding: 0.5em 1em;
+}
