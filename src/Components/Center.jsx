@@ -7,7 +7,7 @@ export default function (props) {
     <div className='center'>
       {/* headings */}
         <div className='center_heading'>
-        <img src={props.val.heading.svg}/>
+        <img src={props.val.heading.svg} alt="icon"/>
         <h3>{props.val.heading.heading}</h3> 
         </div>
          <p>{props.val.heading.sub_heading}</p>
@@ -15,12 +15,12 @@ export default function (props) {
       {/* main product card */}
       <div className='main_product'>
           <div className='main_product_left'>
-            <img src={props.val.main_product.main_product_svg}/>
+            <img src={props.val.main_product.main_product_svg} alt="main product"/>
             <div className='main_product_left_details'>
               <h4>{props.val.main_product.product_title}</h4>
               <h5>{props.val.main_product.product_pipeline}</h5>
               <div className='main_product_left_price'>
-                <img src={props.val.main_product.online_price_icon}/>
+                <img src={props.val.main_product.online_price_icon} alt="online rice icon"/>
                 <p>{`Rs. ${props.val.main_product.online_price}`}</p>
               </div>
               <p>Qty: {props.val.main_product.quantity}</p>
@@ -31,7 +31,7 @@ export default function (props) {
           <span className="vertical-line"></span>
           <div className='main_product_right'>
             <h1>Status
-           <img src={props.val.main_product.status_icon}/>
+           <img src={props.val.main_product.status_icon} alt="product status icon"/>
            </h1>
            {/* contains info about main product */}
            <div className='main_product_right_time'>
