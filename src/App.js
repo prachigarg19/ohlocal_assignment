@@ -7,30 +7,31 @@ function App() {
   // fetching data
   const [val, setVal] = useState({});
   const [isFetched,setisFetched] = useState(false);
- 
+  const getData = async()=>{
+    try{
+    const res= await fetch('https://backend-ohlocal-development.umnsbhcb5nb6a.ap-south-1.cs.amazonlightsail.com/api/test_web_assignment/');
+    const data = await res.json();
+    setVal(data);
+    if(Object.keys(val).length !== 0)
+    setisFetched(true)
+    else
+    setisFetched(false);
+  }
+    catch(err){
+      console.log(err);
+    }
+    };
+    getData();
     // useEffect keeps on executing till data is fetched i.e. isFetched=true
     useEffect(() => {
-      const getData = async()=>{
-        try{
-        const res= await fetch('https://backend-ohlocal-development.umnsbhcb5nb6a.ap-south-1.cs.amazonlightsail.com/api/test_web_assignment/');
-        const data = await res.json();
-        setVal(data);
-        if(Object.keys(val).length !== 0)
-        setisFetched(true)
-        else
-        setisFetched(false);
-      }
-        catch(err){
-          console.log(err);
-        }
-        };
+     
       getData();
-    });
+    },[isFetched]);
     
   return (
     <>
     {/* displays design only if data is fetched */}
-    if(val) {
+    {(isFetched===true) ?
     (<div className="App">
       <Navbar img={val.nav_bar.person_icon}/>
       <Center val={val}/>
@@ -41,11 +42,11 @@ function App() {
         )) 
      } 
       </div>
-    </div>)}
-  else
+    </div>)
+  :
   (<div className='App'>
   </div>)
-   
+   }
     </>
   );
 }
